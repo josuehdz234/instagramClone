@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSSGram</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/cssgram.min.css">
+
+	<link rel="stylesheet" type="text/css" href="font/flaticon.css">
+
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+</head>
+<body>	
+
+	<!-- this span is for show a picture-->
+	<span class="modal__img" style="display: none;"></span>
+	<!--./-->
+
+	<!--
+
+		efects-> these are =
+
+		1977: class="_1977"
+		Aden: class="aden"
+		Brannan: class="brannan"
+		Brooklyn: class="brooklyn"
+		Letras gruesas a la media: class="clarendon"
+		Madrugador: class="earlybird"
+		Guingán: class="gingham"
+		Hudson: class="hudson"
+		Tintero: class="inkwell"
+		Kelvin: class="kelvin"
+		Alondra: class="lark"
+		Lo-Fi: class="lofi"
+		Maven: class="maven"
+		Mayfair: class="mayfair"
+		Luna: class="moon"
+		Nashville: class="nashville"
+		Perpetua: class="perpetua"
+		Reyes: class="reyes"
+		Subir: class="rise"
+		Sueño: class="slumber"
+		Stinson: class="stinson"
+		Tostadora: class="toaster"
+		Valencia: class="valencia"
+		Walden: class="walden"
+		Sauce: class="willow"
+		X-pro II: class="xpro2"
+	-->
+	<div class="main">
+		
+		<!-- feed -->		
+		<div class="feed__root">
+			<div class="head__feed">
+				<div class="img__feed">
+					<img src="img/atx.jpg" width="30" height="30">
+				</div>
+				<div class="title__feed">
+					<a href="#" class="title">josue__hdz</a>
+				</div>
+			</div>			
+			<div class="body__feed">
+				<!--img-->				
+				<div class="toaster publisher__feed" instagram-active="true">
+					<img src="img/atx.jpg">
+				</div>
+				<!-- ./ img -->
+				<div class="actions__content__feed">
+					<div class="actions__feed">
+						<button class="like" instagram-like="false"><img src="img/instagram-icons/heart-o.png" width="30"></button>
+						<button><img src="img/instagram-icons/comment.png" width="30"></button>
+						<button class="feed__save"><img src="img/instagram-icons/save.png" width="30"></button>
+					</div>
+					<div class="likes__feed">
+						<p>256 Me gusta</p>
+						<span>12 ene.</span>
+					</div>
+					<hr>
+					<div class="comment__feed">
+						<textarea class="v-aling-m" rows="1" placeholder="Agregar un comentario..."></textarea>
+						<button class="v-aling-m  modal__open" instagram-modal="i_m_1"><img src="img/instagram-icons/menu.png" width="30"></button>
+					</div>
+
+					<!-- modal -->
+					<div class="modal" style="display: none;" id="i_m_1">
+						<div class="content">
+							<button><i class="glyph-icon flaticon-settings v-aling-m"></i> <span class="v-aling-m"> Configuración</span></button>
+							<hr>
+							<button class="modal__close" instagram-modal="i_m_1"><i class="glyph-icon flaticon-cancel v-aling-m"></i> <span class="v-aling-m">Cancelar</span></button>
+						</div>
+					</div>
+					<!-- ./ modal -->
+				</div>	
+			</div>
+		</div>
+		<!-- ./ feed -->
+
+
+		<!-- feed -->
+		<div class="feed__root">
+			<div class="head__feed">
+				<div class="img__feed">
+					<img src="img/atx.jpg" width="30" height="30">
+				</div>
+				<div class="title__feed">
+					<a href="#" class="title">josue__hdz</a>
+				</div>
+			</div>
+			<div class="body__feed">
+				<!--img-->
+				<div class="_1977 publisher__feed" instagram-active="true">
+					<img src="img/code.jpg">
+				</div>
+				<!-- ./ img -->
+				<div class="actions__content__feed">
+					<div class="actions__feed">
+						<button class="like" instagram-like="false"><img src="img/instagram-icons/heart-o.png" width="30"></button>
+						<button><img src="img/instagram-icons/comment.png" width="30"></button>
+						<button class="feed__save"><img src="img/instagram-icons/save.png" width="30"></button>
+					</div>
+					<div class="likes__feed">
+						<p class="likes">256 Me gusta</p>
+						<span>12 ene.</span>
+					</div>
+					<hr>
+					<div class="comment__feed">
+						<textarea class="v-aling-m" rows="1" placeholder="Agregar un comentario..."></textarea>
+						<button class="v-aling-m modal__open" instagram-modal="i_m_2"><img src="img/instagram-icons/menu.png" width="30"></button>
+					</div>
+					<!-- modal -->
+					<div class="modal" style="display: none;" id="i_m_2">
+						<div class="content">
+							<button><i class="glyph-icon flaticon-settings v-aling-m"></i> <span class="v-aling-m">Configuración</span></button>
+							<hr>
+							<button class="modal__close" instagram-modal="i_m_2"><i class="glyph-icon flaticon-cancel v-aling-m"></i> <span class="v-aling-m">Cancelar</span></button>
+						</div>
+					</div>
+					<!-- ./ modal -->
+				</div>	
+			</div>
+		</div>
+		<!-- ./ feed -->
+
+		<script src="js/jquery-3.1.0.js"></script>
+		<script>
+			
+			/**
+			 * MODAL FUNCTION
+			 * modal->open
+			 */
+			$('.modal__open').click(function(){
+				var objeto = this.getAttribute('instagram-modal');
+				$('#' + objeto).show(500);
+			});
+			/**
+			 * modal->close
+			 */
+
+			$('.modal__close').click(function(){
+				var objeto = this.getAttribute('instagram-modal');
+				$('#' + objeto).hide(500);
+			});
+
+
+			/**
+			 * DARK COVER WITH AN ONCLICK			 
+			 */
+			$('.publisher__feed').click(function(){				
+				var obj = $(this);
+				if (obj.attr('instagram-active') == 'true') {
+					$('.modal__img').show(1000);
+					$(this).attr('instagram-active', 'false');
+					console.warn('insta-bg-active');
+				}
+				else{
+					$('.modal__img').hide(800);
+					$(this).attr('instagram-active', 'true');
+					console.log('insta-bg-desactive');
+				}
+			});
+
+
+			/**
+			 * LIKE  FUNCTION
+			 */
+			$('.like').click(function(){
+				var obj = $(this).attr('instagram-like');
+
+				if (obj == 'false') {
+					$(this).attr('instagram-like', 'true');
+					$(this).html('<img src="img/instagram-icons/heart.png" width="28">');
+				}
+				else{
+					$(this).attr('instagram-like', 'false');
+					$(this).html('<img src="img/instagram-icons/heart-o.png" width="30">');
+				}
+			});
+
+		</script>
+	</div>	
+</body>
+</html>

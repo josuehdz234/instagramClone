@@ -1,0 +1,191 @@
+		body{
+			background: #fafafa;
+			margin: 0px;
+		}
+		hr{
+			margin-bottom: 20px;
+			border: .5px solid #efefef;
+		}
+		.main{
+			margin-top: 40px;
+			margin-left: 30%;
+			margin-bottom: 40px;
+		}
+		.v-aling-m{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.feed__root{
+			margin-bottom: 30px;			
+			width: 60%;
+			background: #fff;
+		}
+		.feed__root > .head__feed{
+			padding: 16px;			
+			padding-left: 23px;
+			border-radius: 5px;
+			border: 1px solid #e6e6e6;
+			border-bottom-left-radius: 0px;
+			border-bottom-right-radius: 0px;
+		}
+		.feed__root > .head__feed > .img__feed{
+			display: inline-block;
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+		.feed__root > .head__feed > .img__feed > img{
+			border-radius: 100%;
+			background: #eeeeee;
+			border: 2px solid #eeeeee;
+		}
+		.feed__root > .head__feed > .title__feed{
+			display: inline-block;
+		}
+		.feed__root > .head__feed > .title__feed > .title{
+			font-size: 15px;
+			font-weight: bold;
+			font-family: Arial;
+			text-decoration: none;
+			color: #000;
+		}
+		.feed__root > .body__feed > .actions__content__feed{
+			border-radius: 5px;
+			padding: 0 16px;
+			border: 1px solid #e6e6e6;
+			border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+		}
+		.feed__root > .actions__content__feed{
+			max-width: 100%;
+		}
+		.feed__root > .body__feed > figure{
+			width: 100%;
+			max-width: 100% !important;
+		}
+		.feed__root > .body__feed > div > img{
+			width: initial !important;
+			max-width: 100% !important;
+		}		
+		.feed__root > .body__feed > .actions__content__feed > .actions__feed{
+			margin-top: 4px;
+		}
+		.feed__root > .body__feed > .actions__content__feed > .actions__feed > button{
+			padding: 10px;
+			background: transparent;
+			border: none;
+			cursor: pointer;
+		}
+		.feed__root > .body__feed > .actions__content__feed > .actions__feed > button:focus{
+			outline: none;
+		}
+		.feed__root > .body__feed > .actions__content__feed > .actions__feed > .feed__save{
+			float: right;
+		}
+		.feed__root > .body__feed > .actions__content__feed > .comment__feed > textarea{
+			resize: none;
+			font-size: 15px;
+			letter-spacing: initial;
+    		word-spacing: initial;
+    		font-family: arial;
+    		font-weight: lighter;
+    		border:none;
+    		width: 87%;
+		}
+		.feed__root > .body__feed > .actions__content__feed > .comment__feed > textarea:focus{
+			outline: none;
+		}
+		.feed__root > .body__feed > .actions__content__feed > .comment__feed > button{
+			background: #fff;
+			border:none;
+			cursor: pointer;
+		}
+		.feed__root > .body__feed > .actions__content__feed > .comment__feed{
+			padding-bottom: 20px;
+		}
+		.feed__root > .body__feed > .actions__content__feed > .likes__feed > p{
+			font-weight: bold;
+			font-family: arial;
+			font-size: 15px;
+			margin-top: 0px;
+		}
+		.feed__root > .body__feed > .actions__content__feed > .likes__feed > span{			
+			font-family: arial;
+			font-size: 13px;
+			color: #bdbdbd;
+			margin-top: 0px;
+		}
+		.glyph-icon:hover{
+			color: #757575;
+		}
+		.glyph-icon::before{
+			margin-left: 0px !important;
+			font-size: 26px !important;
+		}
+		@media (max-width: 940px){
+			.main{
+				margin-left: 0px;
+			}
+			.feed__root{
+				width: 100%;
+			}
+			.feed__root > .body__feed > .actions__content__feed > .comment__feed > textarea{
+				width: 75%;
+			}
+			.feed__root > .head__feed{
+				border-top-right-radius: 0px;
+				border-top-left-radius: 0px;
+			}
+		}
+		.modal::before{
+			content: '';
+			-webkit-filter: blur(10px);
+			filter: blur(100px);
+			background-color: rgba(0,0,0,0.9);
+			position: fixed;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			top: 0px;
+			z-index: 1;
+		}
+		.modal > .content{
+			padding: 30px;
+			left: 34%;
+			top:25%;
+			width: 30%;
+			position: fixed;
+			display: inline-block;
+			background-color: #fff;
+			z-index: 2;
+			border:1px solid #eeeeee;
+			border-radius: 5px;			
+		}
+		.modal > .content > button{
+			display: block;
+			width: 100%;
+			margin-bottom: 10px;
+			padding: 10px;
+			font-size: 20px;
+			background-color: transparent;
+			border: 2px solid #fff;	
+			text-align: center;
+			max-height: 500px;
+			overflow-x: hidden;
+			cursor: pointer;
+		}
+		.modal > .content > button:hover{
+			background-color: transparent;
+			border: 2px solid #eeeeee;
+			border-radius: 5px;
+		}
+		.modal__img::before{
+			content: '';
+			-webkit-filter: blur(2px);
+			filter: blur(2px);
+			background-color: rgba(0,0,0,0.8);
+			position: fixed;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			top: 0px;			
+		}
