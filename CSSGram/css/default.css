@@ -1,13 +1,14 @@
 		body{
 			background: #fafafa;
 			margin: 0px;
+			font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif !important;
 		}
 		hr{
 			margin-bottom: 20px;
 			border: .5px solid #efefef;
 		}
 		.main{
-			margin-top: 40px;
+			margin-top: 100px;
 			margin-left: 30%;
 			margin-bottom: 40px;
 		}
@@ -138,15 +139,13 @@
 		}
 		.modal::before{
 			content: '';
-			-webkit-filter: blur(10px);
-			filter: blur(100px);
-			background-color: rgba(0,0,0,0.9);
+			z-index: 23;			
+			background-color: rgba(0,0,0,0.7);
 			position: fixed;
 			left: 0px;
 			right: 0px;
 			bottom: 0px;
-			top: 0px;
-			z-index: 1;
+			top: 0px;			
 		}
 		.modal > .content{
 			padding: 30px;
@@ -156,7 +155,7 @@
 			position: fixed;
 			display: inline-block;
 			background-color: #fff;
-			z-index: 2;
+			z-index: 23;
 			border:1px solid #eeeeee;
 			border-radius: 5px;			
 		}
@@ -179,7 +178,7 @@
 			border-radius: 5px;
 		}
 		.modal__img::before{
-			content: '';
+			content: '';			
 			-webkit-filter: blur(2px);
 			filter: blur(2px);
 			background-color: rgba(0,0,0,0.8);
@@ -188,4 +187,82 @@
 			right: 0px;
 			bottom: 0px;
 			top: 0px;			
+		}
+		.nav-fixed-root{
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			z-index: 4;
+			right: 0px;
+		}
+		.nav__root{
+			background: #fff;
+			border-bottom: 1px solid #eeeeee;
+		}
+		.nav__root > .nav__content{
+			width: 70%;
+			margin: auto;
+		}
+		.nav__root > .nav__content > .nav__baners{
+			display: inline-block;
+			float: left;
+		}
+		.nav__root > .nav__content > .nav__baners > ul{
+			list-style: none;
+			padding-left: 0px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+		.nav__root > .nav__content > .nav__baners > ul > li{
+			display: inline-block;
+			margin-right: 20px;
+			vertical-align: middle;
+			padding: 7px;
+		}
+		.nav__root > .nav__content > .nav__baners > ul > .search > form > input{
+			border:none;			
+			width: 250px;			
+		}
+		.nav__root > .nav__content > .nav__baners > ul > .search > form > input:focus{
+			outline: none;
+		}
+		.nav__root > .nav__content > .nav__baners > ul > .search > form{
+			padding: 5px;
+			cursor: pointer;
+			background:#fafafa;
+			color: #999;
+			font-family: arial;
+			font-size: 12px;
+			border: solid 1px #dbdbdb;
+			border-radius: 3px;
+		}
+		.nav__root > .nav__content > .nav__baners > ul > .search > form > div{
+			width: 250px;
+			text-align: center;
+			background: transparent;
+		}
+		.nav__root > .nav__content > .nav__baners > ul > .search > form > div > p{
+			margin-top: 0px !important;
+			margin-bottom: 0px !important;
+		}
+		.nav__root > .nav__content > .nav__actions{
+			display: inline-block;
+			float: right;	
+		}
+		.nav__root > .nav__content > .nav__actions > ul{
+			list-style: none;
+			padding-left: 0px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+		.nav__root > .nav__content > .nav__actions > ul > li{
+			display: inline-block;
+			margin-right: 15px;
+			vertical-align: middle;
+			cursor: pointer;
+			padding: 19px;
+		}		
+		.f-12::before{
+			margin-left: 0px;
+			font-size: 12px;
 		}

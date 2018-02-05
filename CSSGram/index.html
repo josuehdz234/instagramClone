@@ -47,6 +47,40 @@
 		Sauce: class="willow"
 		X-pro II: class="xpro2"
 	-->
+
+	<nav class="nav__root nav-fixed-root">
+		<div class="nav__content">
+			<div class="nav__baners">
+				<ul>
+					<li>
+						<img src="img/Fire_96px.png" class="v-aling-m" width="30">
+						<h3 style="font-family: arial; display: inline-block;" class="v-aling-m">Tabs</h3>
+					</li>
+					<li class="search">
+						<form class="nav__search" instagram-status="none">
+							<div id="div_s_x">
+								<p><i class="f-12 flaticon-magnifying-glass"></i> Buscar</p>
+							</div>
+							<input id="inp_s_x" type="text" placeholder="Buscar..." style="display: none;" name="">
+						</form>
+					</li>
+				</ul>
+			</div>			
+			<div class="nav__actions">
+				<ul>
+					<li>
+						<i class="glyph-icon flaticon-house"></i>
+					</li>
+					<li>
+						<i class="glyph-icon flaticon-star"></i>
+					</li>
+					<li>
+						<i class="glyph-icon flaticon-avatar"></i>
+					</li>
+				</ul>
+			</div>
+		</div>		
+	</nav>
 	<div class="main">
 		
 		<!-- feed -->		
@@ -67,7 +101,9 @@
 				<!-- ./ img -->
 				<div class="actions__content__feed">
 					<div class="actions__feed">
-						<button class="like" instagram-like="false"><img src="img/instagram-icons/heart-o.png" width="30"></button>
+						<button class="like" instagram-like="false">
+							<img src="img/instagram-icons/heart-o.png" width="30">
+						</button>
 						<button><img src="img/instagram-icons/comment.png" width="30"></button>
 						<button class="feed__save"><img src="img/instagram-icons/save.png" width="30"></button>
 					</div>
@@ -150,7 +186,7 @@
 			 */
 			$('.modal__open').click(function(){
 				var objeto = this.getAttribute('instagram-modal');
-				$('#' + objeto).show(500);
+				$('#' + objeto).show();
 			});
 			/**
 			 * modal->close
@@ -158,7 +194,7 @@
 
 			$('.modal__close').click(function(){
 				var objeto = this.getAttribute('instagram-modal');
-				$('#' + objeto).hide(500);
+				$('#' + objeto).hide();
 			});
 
 
@@ -168,7 +204,7 @@
 			$('.publisher__feed').click(function(){				
 				var obj = $(this);
 				if (obj.attr('instagram-active') == 'true') {
-					$('.modal__img').show(1000);
+					$('.modal__img').show(500);
 					$(this).attr('instagram-active', 'false');
 					console.warn('insta-bg-active');
 				}
@@ -196,6 +232,26 @@
 				}
 			});
 
+			/**
+			 *
+			 */
+			$('.nav__search').click(function(){
+				var obj = $(this).attr('instagram-status');
+
+				if (obj == 'none'){
+					$('#div_s_x').css('display','none');
+					$('#inp_s_x').css('display','block');
+					$('#inp_s_x').focus();
+					$('.nav__search').css('background','#fff');
+					$(this).attr('instagram-status','block');
+				}
+				else{
+					$('#div_s_x').css('display','block');
+					$('#inp_s_x').css('display','none');
+					$('.nav__search').css('background','#fafafa');
+					$(this).attr('instagram-status','none');
+				}
+			});
 		</script>
 	</div>	
 </body>
